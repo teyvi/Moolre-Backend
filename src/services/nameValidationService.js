@@ -8,7 +8,7 @@ async function validateAccountName({
   accountnumber,
 }) {
   try {
-    //add accountnumber from env
+    //add accountnumber from 
     const accountNumber = process.env.ACCOUNTNUMBER;
     if (!accountNumber) {
       throw new Error("Account Number is invalid check with Moorle");
