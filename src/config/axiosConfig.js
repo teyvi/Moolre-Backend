@@ -2,11 +2,11 @@ const axios = require('axios');
 require('dotenv').config();
 
 const apiClient = axios.create({
-    baseURL:process.env.THIRD_PARTY_BASE_URL,
+    baseURL:process.env.MOOLRE_API_BASE_URL,
     headers:{
-        'Authorization':`Bearer ${process.env.THIRD_PARTY_PRIVATE_KEY}`,
-        'Content-Type':'application/json'
+        'Content-Type':'application/json',
+        'X-API-USER':process.env.MOOLRE_API_USER_KEY,
+        'X-API-KEY':process.env.MOOLRE_API_PRIVATE_KEY
     }
 })
-module.exports=apiClient
-
+module.exports=apiClient;
